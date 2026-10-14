@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120" width="900" height="120" role="img" aria-label="Contact.">
+<style>
+text{font-family:Poppins,Inter,'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif}
+.tw{animation:tw 3s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.15}50%{opacity:.9}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="vg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00cea8"/><stop offset="1" stop-color="#915EFF"/></linearGradient>
+<linearGradient id="vl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#915EFF"/><stop offset="1" stop-color="#915EFF" stop-opacity="0"/></linearGradient>
+<radialGradient id="b1"><stop offset="0" stop-color="#915EFF" stop-opacity=".35"/><stop offset="1" stop-color="#915EFF" stop-opacity="0"/></radialGradient>
+<radialGradient id="b2"><stop offset="0" stop-color="#00cea8" stop-opacity=".18"/><stop offset="1" stop-color="#00cea8" stop-opacity="0"/></radialGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="900" height="120" fill="#050816"/>
+<circle class="tw" cx="47" cy="44" r="1.2" fill="#fff" style="animation-delay:-2.3s"/><circle class="tw" cx="481" cy="55" r="1.2" fill="#fff" style="animation-delay:-2.1s"/><circle class="tw" cx="106" cy="66" r="1.2" fill="#fff" style="animation-delay:-1.5s"/><circle class="tw" cx="27" cy="73" r="0.9" fill="#fff" style="animation-delay:-1.7s"/><circle class="tw" cx="647" cy="78" r="0.9" fill="#fff" style="animation-delay:-1.2s"/><circle class="tw" cx="67" cy="21" r="0.6" fill="#fff" style="animation-delay:-1.1s"/><circle class="tw" cx="106" cy="28" r="1.2" fill="#fff" style="animation-delay:-2.5s"/><circle class="tw" cx="139" cy="106" r="0.9" fill="#fff" style="animation-delay:-1.8s"/><circle class="tw" cx="526" cy="42" r="1.2" fill="#fff" style="animation-delay:-0.5s"/><circle class="tw" cx="73" cy="14" r="1.2" fill="#fff" style="animation-delay:-0.2s"/><circle class="tw" cx="70" cy="29" r="0.9" fill="#fff" style="animation-delay:-0.8s"/><circle class="tw" cx="86" cy="74" r="1.2" fill="#fff" style="animation-delay:-0.3s"/><circle class="tw" cx="884" cy="112" r="1.2" fill="#fff" style="animation-delay:-2.0s"/><circle class="tw" cx="673" cy="94" r="0.6" fill="#fff" style="animation-delay:-0.3s"/><circle class="tw" cx="645" cy="66" r="1.2" fill="#fff" style="animation-delay:-2.7s"/><circle class="tw" cx="347" cy="50" r="1.2" fill="#fff" style="animation-delay:-2.0s"/><circle class="tw" cx="457" cy="29" r="0.6" fill="#fff" style="animation-delay:-2.5s"/><circle class="tw" cx="807" cy="48" r="0.6" fill="#fff" style="animation-delay:-2.6s"/><text x="40" y="44" font-size="14" letter-spacing="2" fill="#aaa6c3">GET IN TOUCH</text><text x="40" y="96" font-size="48" font-weight="800" fill="#ffffff">Contact.</text></svg>

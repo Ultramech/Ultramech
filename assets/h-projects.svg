@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 56" width="900" height="56" role="img" aria-label="Projects">
-<defs><filter id="g" x="-20%" y="-100%" width="140%" height="300%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#ff2fb3" stop-opacity="0"/><stop offset=".5" stop-color="#ff2fb3"/><stop offset="1" stop-color="#ff2fb3" stop-opacity="0"/></linearGradient></defs><rect x="250" y="0" width="400" height="48" rx="10" fill="#0a0414"/>
-<text x="450" y="30" text-anchor="middle" font-family="Impact,'Arial Black',Arial,sans-serif" font-style="italic" font-size="28" letter-spacing="10" fill="#ff2fb3" filter="url(#g)">PROJECTS</text>
-<rect x="150" y="42" width="600" height="2" fill="url(#l)"/></svg>
