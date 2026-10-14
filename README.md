@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg" width="100%" alt="Animated orbit map: Gaurang Garg at the centre; projects (GoldEye, Saarthi, Travel Planner), hackathon wins (TenzorX 2026 1st place nationally, Zelestra x AWS winner, Smart India Hackathon finalist) and tech stack orbit around."/>
+<img src="assets/hero.svg" width="100%" alt="Neon synthwave banner: Gaurang Garg, AI engineer and hackathon winner, 1st place nationally at TenzorX AI Hackathon 2026."/>
 
 <h3>AI engineer who ships. Hackathon winner. Obsessed with answers you can trust.</h3>
 
@@ -12,7 +12,7 @@
 
 <br/>
 
-## 🪐 Inner orbit: what I've built
+## 🚀 What I've built
 
 <table>
 <tr>
@@ -41,11 +41,11 @@ A **LangGraph** agent that plans trips with a human in the loop. Searches flight
 </tr>
 </table>
 
-<sub>Also in orbit: [CareCopilot](https://github.com/Ultramech/CareCopilot) · [QnA Chatbot Assistant](https://github.com/Ultramech/QnA-Chatbot-Assistant) · [Eye-Cursor](https://github.com/Ultramech/Eye-Cursor) · [Virtual-Piano](https://github.com/Ultramech/Virtual-Piano)</sub>
+<sub>Also: [CareCopilot](https://github.com/Ultramech/CareCopilot) · [QnA Chatbot Assistant](https://github.com/Ultramech/QnA-Chatbot-Assistant) · [Eye-Cursor](https://github.com/Ultramech/Eye-Cursor) · [Virtual-Piano](https://github.com/Ultramech/Virtual-Piano)</sub>
 
 <br/>
 
-## 🏆 Mid orbit: wins
+## 🏆 Wins
 
 |   | Event | Outcome |
 |:-:|:--|:--|
@@ -55,13 +55,7 @@ A **LangGraph** agent that plans trips with a human in the loop. Searches flight
 
 <br/>
 
-## 💼 Now
-
-**AI Engineer Intern at Pankaj Pharma** (Jun to Jul 2026). I built a medical chatbot using LLMs and RAG, with an embedding-based knowledge base on a vector database, and tuned retrieval for accurate, context-aware answers.
-
-<br/>
-
-## 🛰️ Outer orbit: tools
+## 🧰 Tools
 
 <div align="center">
 
