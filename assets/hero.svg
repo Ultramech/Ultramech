@@ -1,103 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" role="img" aria-labelledby="t d">
-  <title id="t">Who is Gaurang Garg? A grounded answer</title>
-  <desc id="d">Animated terminal: a query runs through retrieve, rerank, ground and answer stages, then prints a short cited bio.</desc>
-  <style>
-    text { font-family: "SF Mono", "Fira Code", Menlo, Consolas, monospace; }
-    .dim   { fill: #6b7a99; }
-    .txt   { fill: #d6deeb; }
-    .acc   { fill: #5eead4; }
-    .gold  { fill: #fbbf24; }
-    .cite  { fill: #7dd3fc; }
-    .node  { fill: #0f1a2e; stroke: #26354f; stroke-width: 1.5; }
-    .lbl   { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; fill: #8da0c4; }
-    .sub   { font-size: 10.5px; fill: #55647f; }
-    .arrow { stroke: #26354f; stroke-width: 2; fill: none; }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" role="img" aria-labelledby="t d">
+<title id="t">Gaurang Garg — orbit map</title>
+<desc id="d">An animated solar system: Gaurang at the centre; projects, hackathon wins and tech stack orbit around.</desc>
+<style>
+text{font-family:"SF Mono","Fira Code",Menlo,Consolas,monospace}
+.star{animation:tw 3s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.15}50%{opacity:.9}}
+.halo{animation:pulse 4s ease-in-out infinite;transform-origin:450px 290px}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.55}50%{transform:scale(1.12);opacity:.9}}
+.ring{fill:none;stroke:#7c8db5;stroke-opacity:.22;stroke-dasharray:2 7}
+.rl{font-size:10px;letter-spacing:3px;fill:#7c8db5;fill-opacity:.7}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs>
+<radialGradient id="bg" cx="50%" cy="52%" r="70%"><stop offset="0" stop-color="#1b1442"/><stop offset=".55" stop-color="#0c0b24"/><stop offset="1" stop-color="#05050f"/></radialGradient>
+<radialGradient id="sun" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff7d6"/><stop offset=".35" stop-color="#ffb347"/><stop offset="1" stop-color="#ff5e62"/></radialGradient>
+<radialGradient id="halo"><stop offset="0" stop-color="#ff8a3d" stop-opacity=".55"/><stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/></radialGradient>
+<filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+</defs>
+<rect width="900" height="560" rx="18" fill="url(#bg)"/>
+<rect x="1" y="1" width="898" height="558" rx="18" fill="none" stroke="#2a2a5a" stroke-width="2"/>
 
-    /* typing */
-    #typer { animation: type 1.8s steps(28, end) .4s forwards; }
-    @keyframes type { to { width: 440px; } }
-
-    /* pipeline stages light up one after another */
-    .n1 { animation: lit .5s ease 2.4s forwards; }
-    .n2 { animation: lit .5s ease 3.0s forwards; }
-    .n3 { animation: lit .5s ease 3.6s forwards; }
-    .n4 { animation: lit .5s ease 4.2s forwards; }
-    @keyframes lit { to { stroke: #5eead4; fill: #0d2a2f; } }
-    .l1 { animation: litt .5s ease 2.4s forwards; }
-    .l2 { animation: litt .5s ease 3.0s forwards; }
-    .l3 { animation: litt .5s ease 3.6s forwards; }
-    .l4 { animation: litt .5s ease 4.2s forwards; }
-    @keyframes litt { to { fill: #5eead4; } }
-
-    /* answer lines fade in */
-    .r { opacity: 0; animation: show .6s ease forwards; }
-    .r1 { animation-delay: 5.0s; }
-    .r2 { animation-delay: 5.6s; }
-    .r3 { animation-delay: 6.2s; }
-    .r4 { animation-delay: 6.8s; }
-    .r5 { animation-delay: 7.6s; }
-    @keyframes show { to { opacity: 1; } }
-
-    .cursor { animation: blink 1s steps(1) infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { animation-duration: .01s !important; animation-delay: 0s !important; }
-    }
-  </style>
-  <defs>
-    <clipPath id="clip"><rect id="typer" x="40" y="62" width="0" height="34"/></clipPath>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#5eead4" stop-opacity=".10"/>
-      <stop offset="1" stop-color="#7dd3fc" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-
-  <!-- window -->
-  <rect x="1" y="1" width="898" height="468" rx="16" fill="#0a1120" stroke="#1d2a45" stroke-width="2"/>
-  <rect x="1" y="1" width="898" height="468" rx="16" fill="url(#glow)"/>
-  <circle cx="30" cy="26" r="6" fill="#ff5f57"/><circle cx="52" cy="26" r="6" fill="#febc2e"/><circle cx="74" cy="26" r="6" fill="#28c840"/>
-  <text x="450" y="31" text-anchor="middle" class="dim" font-size="12">grounded-answer — Ultramech/Ultramech</text>
-  <line x1="1" y1="48" x2="899" y2="48" stroke="#1d2a45"/>
-
-  <!-- prompt -->
-  <text x="40" y="86" font-size="20"><tspan class="acc">❯</tspan> <tspan class="dim">ask</tspan></text>
-  <g clip-path="url(#clip)">
-    <text x="112" y="86" font-size="20" class="txt">"who is gaurang garg?"</text>
-  </g>
-
-  <!-- pipeline -->
-  <g>
-    <rect class="node n1" x="40"  y="118" width="170" height="58" rx="10"/>
-    <rect class="node n2" x="270" y="118" width="170" height="58" rx="10"/>
-    <rect class="node n3" x="500" y="118" width="170" height="58" rx="10"/>
-    <rect class="node n4" x="730" y="118" width="130" height="58" rx="10"/>
-    <text class="lbl l1" x="125" y="143" text-anchor="middle">RETRIEVE</text>
-    <text class="sub"    x="125" y="161" text-anchor="middle">resume · repos · wins</text>
-    <text class="lbl l2" x="355" y="143" text-anchor="middle">RERANK</text>
-    <text class="sub"    x="355" y="161" text-anchor="middle">best evidence first</text>
-    <text class="lbl l3" x="585" y="143" text-anchor="middle">GROUND</text>
-    <text class="sub"    x="585" y="161" text-anchor="middle">no source, no claim</text>
-    <text class="lbl l4" x="795" y="143" text-anchor="middle">ANSWER</text>
-    <text class="sub"    x="795" y="161" text-anchor="middle">cited</text>
-    <path class="arrow" d="M214 147 H266 M262 142 l5 5 l-5 5"/>
-    <path class="arrow" d="M444 147 H496 M492 142 l5 5 l-5 5"/>
-    <path class="arrow" d="M674 147 H726 M722 142 l5 5 l-5 5"/>
-  </g>
-
-  <line x1="40" y1="206" x2="860" y2="206" stroke="#1d2a45" stroke-dasharray="3 6"/>
-
-  <!-- answer -->
-  <g font-size="16">
-    <text class="r r1" x="40" y="244"><tspan class="acc">Gaurang Garg</tspan><tspan class="txt"> — AI engineer, CS undergrad at Thapar </tspan><tspan class="cite">[1]</tspan></text>
-    <text class="r r2" x="40" y="280"><tspan class="gold">1st nationally</tspan><tspan class="txt">, TenzorX AI Hackathon 2026 — 20,000+ teams </tspan><tspan class="cite">[2]</tspan></text>
-    <text class="r r3" x="40" y="316"><tspan class="txt">Builds RAG, Text-to-SQL &amp; agent systems that </tspan><tspan class="acc">cite their sources</tspan><tspan class="txt"> </tspan><tspan class="cite">[3]</tspan></text>
-    <text class="r r4" x="40" y="352"><tspan class="txt">Now: AI Engineer Intern, medical RAG chatbot </tspan><tspan class="cite">[4]</tspan></text>
-  </g>
-
-  <g class="r r5">
-    <line x1="40" y1="382" x2="860" y2="382" stroke="#1d2a45" stroke-dasharray="3 6"/>
-    <text x="40" y="412" font-size="13" class="dim">sources <tspan class="cite">[1]</tspan> education   <tspan class="cite">[2]</tspan> achievements   <tspan class="cite">[3]</tspan> projects   <tspan class="cite">[4]</tspan> experience   ↓ expand below</text>
-    <text x="40" y="440" font-size="13" class="dim">faithfulness <tspan class="acc">87.5%</tspan> · routing <tspan class="acc">100%</tspan>  <tspan class="dim">(Saarthi eval harness)</tspan><tspan class="acc cursor"> ▍</tspan></text>
-  </g>
+<circle class="star" cx="345" cy="168" r="1.3" fill="#fff" style="animation-delay:-2.0s;animation-duration:2.7s"/>
+<circle class="star" cx="562" cy="110" r="1" fill="#fff" style="animation-delay:-1.7s;animation-duration:4.8s"/>
+<circle class="star" cx="233" cy="52" r="0.6" fill="#fff" style="animation-delay:-1.3s;animation-duration:2.7s"/>
+<circle class="star" cx="106" cy="448" r="0.6" fill="#fff" style="animation-delay:-2.5s;animation-duration:2.8s"/>
+<circle class="star" cx="242" cy="77" r="1.3" fill="#fff" style="animation-delay:-0.1s;animation-duration:3.1s"/>
+<circle class="star" cx="584" cy="150" r="1" fill="#fff" style="animation-delay:-1.3s;animation-duration:3.9s"/>
+<circle class="star" cx="598" cy="329" r="0.8" fill="#fff" style="animation-delay:-0.3s;animation-duration:3.9s"/>
+<circle class="star" cx="206" cy="395" r="0.6" fill="#fff" style="animation-delay:-1.6s;animation-duration:2.7s"/>
+<circle class="star" cx="75" cy="224" r="1.3" fill="#fff" style="animation-delay:-2.0s;animation-duration:3.6s"/>
+<circle class="star" cx="335" cy="490" r="1.3" fill="#fff" style="animation-delay:-1.1s;animation-duration:3.1s"/>
+<circle class="star" cx="198" cy="263" r="0.6" fill="#fff" style="animation-delay:-1.7s;animation-duration:3.8s"/>
+<circle class="star" cx="365" cy="473" r="1" fill="#fff" style="animation-delay:-1.8s;animation-duration:2.7s"/>
+<circle class="star" cx="538" cy="442" r="0.8" fill="#fff" style="animation-delay:-2.3s;animation-duration:2.9s"/>
+<circle class="star" cx="514" cy="445" r="0.6" fill="#fff" style="animation-delay:-2.9s;animation-duration:2.7s"/>
+<circle class="star" cx="585" cy="335" r="1" fill="#fff" style="animation-delay:-2.1s;animation-duration:4.0s"/>
+<circle class="star" cx="607" cy="481" r="0.6" fill="#fff" style="animation-delay:-2.5s;animation-duration:4.9s"/>
+<circle class="star" cx="499" cy="80" r="0.6" fill="#fff" style="animation-delay:-2.2s;animation-duration:3.3s"/>
+<circle class="star" cx="605" cy="470" r="1" fill="#fff" style="animation-delay:-2.1s;animation-duration:4.7s"/>
+<circle class="star" cx="369" cy="37" r="1.3" fill="#fff" style="animation-delay:-1.1s;animation-duration:4.0s"/>
+<circle class="star" cx="519" cy="74" r="0.8" fill="#fff" style="animation-delay:-2.3s;animation-duration:2.8s"/>
+<circle class="star" cx="267" cy="421" r="1.3" fill="#fff" style="animation-delay:-2.8s;animation-duration:3.7s"/>
+<circle class="star" cx="184" cy="473" r="1.3" fill="#fff" style="animation-delay:-1.6s;animation-duration:4.7s"/>
+<circle class="star" cx="852" cy="454" r="1" fill="#fff" style="animation-delay:-2.1s;animation-duration:5.0s"/>
+<circle class="star" cx="713" cy="403" r="0.8" fill="#fff" style="animation-delay:-0.5s;animation-duration:2.9s"/>
+<circle class="star" cx="251" cy="252" r="0.6" fill="#fff" style="animation-delay:-1.5s;animation-duration:4.0s"/>
+<circle class="star" cx="283" cy="302" r="0.6" fill="#fff" style="animation-delay:-0.4s;animation-duration:3.8s"/>
+<circle class="star" cx="638" cy="340" r="0.8" fill="#fff" style="animation-delay:-2.1s;animation-duration:3.8s"/>
+<circle class="star" cx="646" cy="69" r="1.3" fill="#fff" style="animation-delay:-2.7s;animation-duration:4.4s"/>
+<circle class="star" cx="710" cy="415" r="1.3" fill="#fff" style="animation-delay:-1.2s;animation-duration:2.8s"/>
+<circle class="star" cx="663" cy="424" r="0.6" fill="#fff" style="animation-delay:-0.6s;animation-duration:5.0s"/>
+<circle class="star" cx="465" cy="180" r="0.6" fill="#fff" style="animation-delay:-1.0s;animation-duration:2.6s"/>
+<circle class="star" cx="14" cy="168" r="0.6" fill="#fff" style="animation-delay:-2.8s;animation-duration:4.0s"/>
+<circle class="star" cx="86" cy="226" r="1.3" fill="#fff" style="animation-delay:-0.4s;animation-duration:3.1s"/>
+<circle class="star" cx="369" cy="386" r="1.3" fill="#fff" style="animation-delay:-0.4s;animation-duration:4.6s"/>
+<circle class="star" cx="491" cy="505" r="1.3" fill="#fff" style="animation-delay:-0.9s;animation-duration:2.9s"/>
+<circle class="star" cx="781" cy="364" r="1" fill="#fff" style="animation-delay:-1.4s;animation-duration:4.2s"/>
+<circle class="star" cx="542" cy="37" r="0.8" fill="#fff" style="animation-delay:-2.9s;animation-duration:3.8s"/>
+<circle class="star" cx="164" cy="41" r="1" fill="#fff" style="animation-delay:-2.9s;animation-duration:4.7s"/>
+<circle class="star" cx="726" cy="281" r="1" fill="#fff" style="animation-delay:-2.7s;animation-duration:3.4s"/>
+<circle class="star" cx="242" cy="528" r="1" fill="#fff" style="animation-delay:-1.9s;animation-duration:4.0s"/>
+<circle class="star" cx="821" cy="213" r="0.8" fill="#fff" style="animation-delay:-2.5s;animation-duration:4.3s"/>
+<circle class="star" cx="246" cy="218" r="1.3" fill="#fff" style="animation-delay:-1.1s;animation-duration:2.6s"/>
+<circle class="star" cx="42" cy="300" r="1.3" fill="#fff" style="animation-delay:-0.8s;animation-duration:4.2s"/>
+<circle class="star" cx="366" cy="471" r="1" fill="#fff" style="animation-delay:-2.9s;animation-duration:3.4s"/>
+<circle class="star" cx="239" cy="118" r="0.8" fill="#fff" style="animation-delay:-1.4s;animation-duration:3.3s"/>
+<circle class="star" cx="508" cy="15" r="1.3" fill="#fff" style="animation-delay:-2.7s;animation-duration:3.4s"/>
+<circle class="star" cx="672" cy="100" r="0.6" fill="#fff" style="animation-delay:-2.7s;animation-duration:4.5s"/>
+<circle class="star" cx="782" cy="218" r="1.3" fill="#fff" style="animation-delay:-2.7s;animation-duration:3.6s"/>
+<circle class="star" cx="665" cy="354" r="0.6" fill="#fff" style="animation-delay:-2.4s;animation-duration:4.9s"/>
+<circle class="star" cx="419" cy="488" r="1.3" fill="#fff" style="animation-delay:-2.2s;animation-duration:2.7s"/>
+<circle class="star" cx="176" cy="188" r="0.8" fill="#fff" style="animation-delay:-0.1s;animation-duration:4.0s"/>
+<circle class="star" cx="490" cy="163" r="1.3" fill="#fff" style="animation-delay:-2.0s;animation-duration:3.4s"/>
+<circle class="star" cx="575" cy="148" r="0.6" fill="#fff" style="animation-delay:-0.0s;animation-duration:4.9s"/>
+<circle class="star" cx="679" cy="119" r="0.8" fill="#fff" style="animation-delay:-1.3s;animation-duration:4.7s"/>
+<circle class="star" cx="859" cy="230" r="0.6" fill="#fff" style="animation-delay:-0.8s;animation-duration:3.2s"/>
+<circle class="star" cx="260" cy="347" r="1" fill="#fff" style="animation-delay:-1.6s;animation-duration:4.6s"/>
+<circle class="star" cx="76" cy="376" r="1.3" fill="#fff" style="animation-delay:-2.0s;animation-duration:4.5s"/>
+<circle class="star" cx="543" cy="444" r="0.8" fill="#fff" style="animation-delay:-1.6s;animation-duration:3.8s"/>
+<circle class="star" cx="33" cy="464" r="0.8" fill="#fff" style="animation-delay:-1.8s;animation-duration:4.4s"/>
+<circle class="star" cx="167" cy="190" r="0.8" fill="#fff" style="animation-delay:-1.4s;animation-duration:4.3s"/>
+<circle class="star" cx="583" cy="77" r="1" fill="#fff" style="animation-delay:-2.0s;animation-duration:3.8s"/>
+<circle class="star" cx="508" cy="122" r="0.6" fill="#fff" style="animation-delay:-0.7s;animation-duration:3.2s"/>
+<circle class="star" cx="804" cy="114" r="1.3" fill="#fff" style="animation-delay:-1.7s;animation-duration:4.4s"/>
+<circle class="star" cx="78" cy="467" r="1" fill="#fff" style="animation-delay:-1.8s;animation-duration:3.8s"/>
+<circle class="star" cx="538" cy="218" r="1" fill="#fff" style="animation-delay:-1.4s;animation-duration:3.8s"/>
+<circle class="star" cx="503" cy="533" r="0.8" fill="#fff" style="animation-delay:-2.1s;animation-duration:4.7s"/>
+<circle class="star" cx="279" cy="221" r="1.3" fill="#fff" style="animation-delay:-0.4s;animation-duration:2.8s"/>
+<circle class="star" cx="466" cy="337" r="0.6" fill="#fff" style="animation-delay:-2.0s;animation-duration:3.6s"/>
+<circle class="star" cx="231" cy="324" r="0.6" fill="#fff" style="animation-delay:-2.7s;animation-duration:2.9s"/>
+<circle class="star" cx="747" cy="388" r="0.8" fill="#fff" style="animation-delay:-0.8s;animation-duration:2.8s"/>
+<ellipse class="ring" cx="450" cy="290" rx="150" ry="63.0"/>
+<text class="rl" x="450" y="367" text-anchor="middle">PROJECTS</text>
+<ellipse class="ring" cx="450" cy="290" rx="255" ry="107.1"/>
+<text class="rl" x="450" y="411" text-anchor="middle">WINS</text>
+<ellipse class="ring" cx="450" cy="290" rx="360" ry="151.2"/>
+<text class="rl" x="450" y="455" text-anchor="middle">STACK</text>
+<circle class="halo" cx="450" cy="290" r="95" fill="url(#halo)"/>
+<circle cx="450" cy="290" r="44" fill="url(#sun)"/>
+<text x="450" y="288" text-anchor="middle" font-size="15" font-weight="700" fill="#2b1200" letter-spacing="2">GAURANG</text>
+<text x="450" y="306" text-anchor="middle" font-size="15" font-weight="700" fill="#2b1200" letter-spacing="2">GARG</text>
+<g><circle r="16" fill="#fbbf24" opacity=".35" filter="url(#g)"/><circle r="11" fill="#fbbf24"/><text x="18" y="4" font-size="12" fill="#e6e8ff" fill-opacity="1">GoldEye</text><animateMotion dur="48s" begin="0.0s" repeatCount="indefinite" path="M600,290 A150,63.0 0 1,1 300,290 A150,63.0 0 1,1 600,290"/></g>
+<g><circle r="15" fill="#5eead4" opacity=".35" filter="url(#g)"/><circle r="10" fill="#5eead4"/><text x="17" y="4" font-size="12" fill="#e6e8ff" fill-opacity="1">Saarthi</text><animateMotion dur="48s" begin="-16.0s" repeatCount="indefinite" path="M600,290 A150,63.0 0 1,1 300,290 A150,63.0 0 1,1 600,290"/></g>
+<g><circle r="15" fill="#a78bfa" opacity=".35" filter="url(#g)"/><circle r="10" fill="#a78bfa"/><text x="17" y="4" font-size="12" fill="#e6e8ff" fill-opacity="1">Travel Planner</text><animateMotion dur="48s" begin="-32.0s" repeatCount="indefinite" path="M600,290 A150,63.0 0 1,1 300,290 A150,63.0 0 1,1 600,290"/></g>
+<g><circle r="16" fill="#f472b6" opacity=".35" filter="url(#g)"/><circle r="11" fill="#f472b6"/><text x="18" y="4" font-size="12" fill="#e6e8ff" fill-opacity="1">TenzorX '26 · 1st</text><animateMotion dur="80s" begin="0.0s" repeatCount="indefinite" path="M705,290 A255,107.1 0 1,1 195,290 A255,107.1 0 1,1 705,290"/></g>
+<g><circle r="15" fill="#60a5fa" opacity=".35" filter="url(#g)"/><circle r="10" fill="#60a5fa"/><text x="17" y="4" font-size="12" fill="#e6e8ff" fill-opacity="1">Zelestra x AWS · Winner</text><animateMotion dur="80s" begin="-26.7s" repeatCount="indefinite" path="M705,290 A255,107.1 0 1,1 195,290 A255,107.1 0 1,1 705,290"/></g>
+<g><circle r="14" fill="#fb923c" opacity=".35" filter="url(#g)"/><circle r="9" fill="#fb923c"/><text x="16" y="4" font-size="12" fill="#e6e8ff" fill-opacity="1">SIH '25 · Finalist</text><animateMotion dur="80s" begin="-53.3s" repeatCount="indefinite" path="M705,290 A255,107.1 0 1,1 195,290 A255,107.1 0 1,1 705,290"/></g>
+<g><circle r="11" fill="#94a3b8" opacity=".35" filter="url(#g)"/><circle r="6" fill="#94a3b8"/><text x="13" y="4" font-size="10" fill="#e6e8ff" fill-opacity="0.75">Python</text><animateMotion dur="130s" begin="0.0s" repeatCount="indefinite" path="M810,290 A360,151.2 0 1,1 90,290 A360,151.2 0 1,1 810,290"/></g>
+<g><circle r="11" fill="#94a3b8" opacity=".35" filter="url(#g)"/><circle r="6" fill="#94a3b8"/><text x="13" y="4" font-size="10" fill="#e6e8ff" fill-opacity="0.75">LangGraph</text><animateMotion dur="130s" begin="-21.7s" repeatCount="indefinite" path="M810,290 A360,151.2 0 1,1 90,290 A360,151.2 0 1,1 810,290"/></g>
+<g><circle r="11" fill="#94a3b8" opacity=".35" filter="url(#g)"/><circle r="6" fill="#94a3b8"/><text x="13" y="4" font-size="10" fill="#e6e8ff" fill-opacity="0.75">RAG</text><animateMotion dur="130s" begin="-43.3s" repeatCount="indefinite" path="M810,290 A360,151.2 0 1,1 90,290 A360,151.2 0 1,1 810,290"/></g>
+<g><circle r="11" fill="#94a3b8" opacity=".35" filter="url(#g)"/><circle r="6" fill="#94a3b8"/><text x="13" y="4" font-size="10" fill="#e6e8ff" fill-opacity="0.75">FastAPI</text><animateMotion dur="130s" begin="-65.0s" repeatCount="indefinite" path="M810,290 A360,151.2 0 1,1 90,290 A360,151.2 0 1,1 810,290"/></g>
+<g><circle r="11" fill="#94a3b8" opacity=".35" filter="url(#g)"/><circle r="6" fill="#94a3b8"/><text x="13" y="4" font-size="10" fill="#e6e8ff" fill-opacity="0.75">OpenCV</text><animateMotion dur="130s" begin="-86.7s" repeatCount="indefinite" path="M810,290 A360,151.2 0 1,1 90,290 A360,151.2 0 1,1 810,290"/></g>
+<g><circle r="11" fill="#94a3b8" opacity=".35" filter="url(#g)"/><circle r="6" fill="#94a3b8"/><text x="13" y="4" font-size="10" fill="#e6e8ff" fill-opacity="0.75">Airflow</text><animateMotion dur="130s" begin="-108.3s" repeatCount="indefinite" path="M810,290 A360,151.2 0 1,1 90,290 A360,151.2 0 1,1 810,290"/></g>
+<text x="34" y="46" font-size="13" fill="#8f9bd0" letter-spacing="3">// ULTRAMECH</text>
+<text x="34" y="66" font-size="11" fill="#5d6794">AI · RAG · agents · computer vision</text>
+<text x="866" y="530" text-anchor="end" font-size="12" fill="#fbbf24">★ 1st place nationally · TenzorX AI Hackathon 2026</text>
+<text x="866" y="548" text-anchor="end" font-size="11" fill="#5d6794">20,000+ teams · 4,500+ colleges · ₹4 Lakh</text>
+<text x="34" y="548" font-size="11" fill="#5d6794">B.E. Computer Engineering · Thapar Institute · CGPA 9.00</text>
 </svg>

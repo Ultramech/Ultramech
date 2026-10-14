@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="assets/hero.svg" width="100%" alt="Terminal answering 'who is gaurang garg?' with cited sources: AI engineer and CS undergrad at Thapar, 1st nationally at TenzorX AI Hackathon 2026, builds RAG, Text-to-SQL and agent systems, AI Engineer Intern on a medical RAG chatbot."/>
+<img src="assets/hero.svg" width="100%" alt="Animated orbit map: Gaurang Garg at the centre; projects (GoldEye, Saarthi, Travel Planner), hackathon wins (TenzorX 2026 1st place nationally, Zelestra x AWS winner, Smart India Hackathon finalist) and tech stack orbit around."/>
 
-<br/>
+<h3>AI engineer who ships. Hackathon winner. Obsessed with answers you can trust.</h3>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Gaurang%20Garg-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gaurang-garg-5441382a8/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-Gaurang__-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/Gaurang__/)
@@ -10,81 +10,79 @@
 
 </div>
 
-> I build LLM systems on one rule: **no source, no claim.** So this page works the same way. Every line in the answer above points to evidence below. Open a source to check it.
-
----
-
-## 📚 Sources
-
-<details>
-<summary><b>[1] education.md</b> &nbsp;·&nbsp; <i>Thapar Institute of Engineering and Technology</i></summary>
 <br/>
 
-- **B.E. in Computer Engineering**, Aug 2023 to present, Patiala, Punjab
-- **CGPA 9.00**
-- 350+ DSA problems solved on [LeetCode](https://leetcode.com/u/Gaurang__/)
+## 🪐 Inner orbit: what I've built
 
-</details>
+<table>
+<tr>
+<td width="33%" valign="top">
 
-<details open>
-<summary><b>[2] achievements.md</b> &nbsp;·&nbsp; <i>three national and international hackathons</i></summary>
+#### 🪙 [GoldEye](https://github.com/ultramech79-art/PoonaWala)
+Gold-loan pre-qualification from a phone. Reads hallmark, purity, audio, fraud signals and weight, then fuses them with live **IBJA** pricing into an instant valuation and loan eligibility.
+
+🏆 *Won TenzorX 2026*
+
+</td>
+<td width="33%" valign="top">
+
+#### 🛒 [Saarthi](https://github.com/Ultramech/E-Commerce-ChatBot)
+A grounded **RAG + Text-to-SQL** shopping chatbot on an **Airflow** ETL pipeline with daily CI refreshes.
+
+📈 **87.5%** faithfulness · **100%** routing accuracy
+
+</td>
+<td width="33%" valign="top">
+
+#### ✈️ [AI Travel Planner](https://github.com/Ultramech/AI-Travel-Planner)
+A **LangGraph** agent that plans trips with a human in the loop. Searches flights, trains, buses and cabs in parallel, then builds a weather-aware itinerary.
+
+</td>
+</tr>
+</table>
+
+<sub>Also in orbit: [CareCopilot](https://github.com/Ultramech/CareCopilot) · [QnA Chatbot Assistant](https://github.com/Ultramech/QnA-Chatbot-Assistant) · [Eye-Cursor](https://github.com/Ultramech/Eye-Cursor) · [Virtual-Piano](https://github.com/Ultramech/Virtual-Piano)</sub>
+
 <br/>
 
-| Year | Event | Result |
-|:---:|---|---|
-| 2026 | **TenzorX National AI Hackathon** (Poonawalla Fincorp) | 🥇 **Winner.** 1st nationally out of 20,000+ teams and 4,500+ colleges, ₹4 Lakh prize, for an AI gold-assessment platform |
-| 2025 | **Zelestra x AWS Asian Hackathon** | 🥇 **Winner.** TabNet solar-generation model, **R² = 0.9855** |
-| 2025 | **Smart India Hackathon** (Govt. of Jharkhand) | 🎖️ **Finalist.** Top 5 of 1.5 lakh+ teams, with an AR tourism platform |
+## 🏆 Mid orbit: wins
 
-</details>
+|   | Event | Outcome |
+|:-:|:--|:--|
+| 🥇 | **TenzorX National AI Hackathon 2026** | **1st nationally** out of 20,000+ teams and 4,500+ colleges, with a ₹4 Lakh prize |
+| 🥇 | **Zelestra x AWS '25 Asian Hackathon** | **Winner.** TabNet solar-generation model with **R² = 0.9855** |
+| 🎖️ | **Smart India Hackathon 2025** | **Finalist.** Top 5 of 1.5 lakh+ teams, with an AR tourism platform |
 
-<details open>
-<summary><b>[3] projects.md</b> &nbsp;·&nbsp; <i>things I've built</i></summary>
 <br/>
 
-**🪙 [GoldEye](https://github.com/ultramech79-art/PoonaWala)** *(the TenzorX 2026 winner)*
-Gold-loan pre-qualification from a phone. Captures hallmark, purity, audio, fraud signals and weight, then fuses them with live **IBJA** pricing into a real-time valuation and loan eligibility.
+## 💼 Now
 
-**🛒 [Saarthi, the E-Commerce Chatbot](https://github.com/Ultramech/E-Commerce-ChatBot)**
-Grounded **RAG + Text-to-SQL** on an **Airflow** ETL pipeline. Self-correcting SQL and reranked retrieval reach **87.5% faithfulness** and **100% routing accuracy**. Daily CI/CD refreshes keep the scraped catalog current.
+**AI Engineer Intern at Pankaj Pharma** (Jun to Jul 2026). I built a medical chatbot using LLMs and RAG, with an embedding-based knowledge base on a vector database, and tuned retrieval for accurate, context-aware answers.
 
-**✈️ [AI Travel Planner](https://github.com/Ultramech/AI-Travel-Planner)**
-A **LangGraph** agent that plans trips with a human in the loop. It searches flights, trains, buses and cabs in parallel, then builds a weather-aware itinerary with memory across turns.
-
-**More:** [CareCopilot](https://github.com/Ultramech/CareCopilot) · [QnA Chatbot Assistant](https://github.com/Ultramech/QnA-Chatbot-Assistant) · [Eye-Cursor](https://github.com/Ultramech/Eye-Cursor) (move the cursor with your eyes) · [Virtual-Piano](https://github.com/Ultramech/Virtual-Piano)
-
-</details>
-
-<details>
-<summary><b>[4] experience.md</b> &nbsp;·&nbsp; <i>Pankaj Pharma</i></summary>
 <br/>
 
-**AI Engineer Intern**, Jun to Jul 2026
-- Designed and built an AI-powered medical chatbot using LLMs and RAG for healthcare queries
-- Built a medical knowledge base with embeddings and vector databases
-- Tuned the RAG pipeline for accurate, relevant, context-aware answers
-
-</details>
-
----
-
-## ⚙️ Retrieval config
-
-```yaml
-# stack.yaml — what I reach for
-languages:   [Python, C, C++, SQL]
-llm_apps:    [LangChain, LangGraph, RAG, Text-to-SQL, Hugging Face]
-ml_nlp:      [scikit-learn, TensorFlow, Keras, spaCy, NLTK]
-vision:      [OpenCV, MediaPipe, YOLO]
-data:        [Pandas, NumPy, Airflow, Matplotlib, Seaborn, Power BI, Tableau]
-backend:     [FastAPI, Streamlit, Docker, Selenium, Beautiful Soup]
-workflow:    [Git, GitHub Actions]
-principles:
-  - measure hallucination before trying to reduce it
-  - ground every answer in a real source
-  - if the data is stale, fix the pipeline, not the prompt
-```
+## 🛰️ Outer orbit: tools
 
 <div align="center">
-<sub>Rendered by hand. No stats widgets, no counters, just sources.</sub>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
+
+<br/>
+
+<sub>🎓 B.E. Computer Engineering at Thapar Institute · CGPA 9.00 · 350+ problems solved on LeetCode</sub>
+
 </div>
