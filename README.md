@@ -4,7 +4,7 @@
 
 <img src="assets/about.svg" width="100%" alt="Overview: Computer Engineering student at Thapar who builds verifiable AI systems and has won national and international hackathons."/>
 
-<img src="assets/tech.svg" width="100%" alt="Tech: Python, C++, SQL, LangGraph, LangChain, TensorFlow, scikit-learn, OpenCV, FastAPI, Airflow, Docker, Hugging Face."/>
+<img src="assets/tech.svg" width="100%" alt="Tech: Python, C++, SQL, LangGraph, LangChain, TensorFlow, scikit-learn, OpenCV, FastAPI, Airflow, Docker, Hugging Face, Pandas, NumPy, spaCy, Keras, Streamlit, Tableau."/>
 
 <img src="assets/journey.svg" width="100%" alt="Milestones: Thapar 2023, Smart India Hackathon finalist 2025, Zelestra x AWS winner 2025, TenzorX National AI Hackathon winner 2026."/>
 
