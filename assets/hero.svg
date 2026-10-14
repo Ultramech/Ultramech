@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" role="img" aria-labelledby="t d">
+  <title id="t">Who is Gaurang Garg? A grounded answer</title>
+  <desc id="d">Animated terminal: a query runs through retrieve, rerank, ground and answer stages, then prints a short cited bio.</desc>
+  <style>
+    text { font-family: "SF Mono", "Fira Code", Menlo, Consolas, monospace; }
+    .dim   { fill: #6b7a99; }
+    .txt   { fill: #d6deeb; }
+    .acc   { fill: #5eead4; }
+    .gold  { fill: #fbbf24; }
+    .cite  { fill: #7dd3fc; }
+    .node  { fill: #0f1a2e; stroke: #26354f; stroke-width: 1.5; }
+    .lbl   { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; fill: #8da0c4; }
+    .sub   { font-size: 10.5px; fill: #55647f; }
+    .arrow { stroke: #26354f; stroke-width: 2; fill: none; }
+
+    /* typing */
+    #typer { animation: type 1.8s steps(28, end) .4s forwards; }
+    @keyframes type { to { width: 440px; } }
+
+    /* pipeline stages light up one after another */
+    .n1 { animation: lit .5s ease 2.4s forwards; }
+    .n2 { animation: lit .5s ease 3.0s forwards; }
+    .n3 { animation: lit .5s ease 3.6s forwards; }
+    .n4 { animation: lit .5s ease 4.2s forwards; }
+    @keyframes lit { to { stroke: #5eead4; fill: #0d2a2f; } }
+    .l1 { animation: litt .5s ease 2.4s forwards; }
+    .l2 { animation: litt .5s ease 3.0s forwards; }
+    .l3 { animation: litt .5s ease 3.6s forwards; }
+    .l4 { animation: litt .5s ease 4.2s forwards; }
+    @keyframes litt { to { fill: #5eead4; } }
+
+    /* answer lines fade in */
+    .r { opacity: 0; animation: show .6s ease forwards; }
+    .r1 { animation-delay: 5.0s; }
+    .r2 { animation-delay: 5.6s; }
+    .r3 { animation-delay: 6.2s; }
+    .r4 { animation-delay: 6.8s; }
+    .r5 { animation-delay: 7.6s; }
+    @keyframes show { to { opacity: 1; } }
+
+    .cursor { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: .01s !important; animation-delay: 0s !important; }
+    }
+  </style>
+  <defs>
+    <clipPath id="clip"><rect id="typer" x="40" y="62" width="0" height="34"/></clipPath>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5eead4" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#7dd3fc" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- window -->
+  <rect x="1" y="1" width="898" height="468" rx="16" fill="#0a1120" stroke="#1d2a45" stroke-width="2"/>
+  <rect x="1" y="1" width="898" height="468" rx="16" fill="url(#glow)"/>
+  <circle cx="30" cy="26" r="6" fill="#ff5f57"/><circle cx="52" cy="26" r="6" fill="#febc2e"/><circle cx="74" cy="26" r="6" fill="#28c840"/>
+  <text x="450" y="31" text-anchor="middle" class="dim" font-size="12">grounded-answer — Ultramech/Ultramech</text>
+  <line x1="1" y1="48" x2="899" y2="48" stroke="#1d2a45"/>
+
+  <!-- prompt -->
+  <text x="40" y="86" font-size="20"><tspan class="acc">❯</tspan> <tspan class="dim">ask</tspan></text>
+  <g clip-path="url(#clip)">
+    <text x="112" y="86" font-size="20" class="txt">"who is gaurang garg?"</text>
+  </g>
+
+  <!-- pipeline -->
+  <g>
+    <rect class="node n1" x="40"  y="118" width="170" height="58" rx="10"/>
+    <rect class="node n2" x="270" y="118" width="170" height="58" rx="10"/>
+    <rect class="node n3" x="500" y="118" width="170" height="58" rx="10"/>
+    <rect class="node n4" x="730" y="118" width="130" height="58" rx="10"/>
+    <text class="lbl l1" x="125" y="143" text-anchor="middle">RETRIEVE</text>
+    <text class="sub"    x="125" y="161" text-anchor="middle">resume · repos · wins</text>
+    <text class="lbl l2" x="355" y="143" text-anchor="middle">RERANK</text>
+    <text class="sub"    x="355" y="161" text-anchor="middle">best evidence first</text>
+    <text class="lbl l3" x="585" y="143" text-anchor="middle">GROUND</text>
+    <text class="sub"    x="585" y="161" text-anchor="middle">no source, no claim</text>
+    <text class="lbl l4" x="795" y="143" text-anchor="middle">ANSWER</text>
+    <text class="sub"    x="795" y="161" text-anchor="middle">cited</text>
+    <path class="arrow" d="M214 147 H266 M262 142 l5 5 l-5 5"/>
+    <path class="arrow" d="M444 147 H496 M492 142 l5 5 l-5 5"/>
+    <path class="arrow" d="M674 147 H726 M722 142 l5 5 l-5 5"/>
+  </g>
+
+  <line x1="40" y1="206" x2="860" y2="206" stroke="#1d2a45" stroke-dasharray="3 6"/>
+
+  <!-- answer -->
+  <g font-size="16">
+    <text class="r r1" x="40" y="244"><tspan class="acc">Gaurang Garg</tspan><tspan class="txt"> — AI engineer, CS undergrad at Thapar </tspan><tspan class="cite">[1]</tspan></text>
+    <text class="r r2" x="40" y="280"><tspan class="gold">1st nationally</tspan><tspan class="txt">, TenzorX AI Hackathon 2026 — 20,000+ teams </tspan><tspan class="cite">[2]</tspan></text>
+    <text class="r r3" x="40" y="316"><tspan class="txt">Builds RAG, Text-to-SQL &amp; agent systems that </tspan><tspan class="acc">cite their sources</tspan><tspan class="txt"> </tspan><tspan class="cite">[3]</tspan></text>
+    <text class="r r4" x="40" y="352"><tspan class="txt">Now: AI Engineer Intern, medical RAG chatbot </tspan><tspan class="cite">[4]</tspan></text>
+  </g>
+
+  <g class="r r5">
+    <line x1="40" y1="382" x2="860" y2="382" stroke="#1d2a45" stroke-dasharray="3 6"/>
+    <text x="40" y="412" font-size="13" class="dim">sources <tspan class="cite">[1]</tspan> education   <tspan class="cite">[2]</tspan> achievements   <tspan class="cite">[3]</tspan> projects   <tspan class="cite">[4]</tspan> experience   ↓ expand below</text>
+    <text x="40" y="440" font-size="13" class="dim">faithfulness <tspan class="acc">87.5%</tspan> · routing <tspan class="acc">100%</tspan>  <tspan class="dim">(Saarthi eval harness)</tspan><tspan class="acc cursor"> ▍</tspan></text>
+  </g>
+</svg>
