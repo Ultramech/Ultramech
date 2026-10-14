@@ -42,7 +42,7 @@ I'm **Gaurang**, a Computer Engineering student at **Thapar Institute of Enginee
   <tr>
     <td width="50%" valign="top">
 
-### 🪙 GoldEye
+### 🪙 [GoldEye](https://github.com/ultramech79-art/PoonaWala)
 AI-powered **gold-loan pre-qualification** platform for instant jewelry assessment. Smartphone-based capture for hallmark, purity, audio, fraud and weight estimation, with real-time valuation and loan eligibility from live **IBJA** pricing and multi-signal fusion.
 
 *The project behind the TenzorX 2026 win.*
@@ -158,6 +158,8 @@ A playable virtual piano built in Python.
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-Ultramech-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ultramech)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Gaurang%20Garg-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gaurang-garg-5441382a8/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-Gaurang__-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/Gaurang__/)
 [![Email](https://img.shields.io/badge/Email-gaurang020106@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gaurang020106@gmail.com)
 
 <sub>⭐ If something here helps you, a star means a lot.</sub>
